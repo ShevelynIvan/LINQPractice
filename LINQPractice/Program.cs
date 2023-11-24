@@ -125,7 +125,7 @@
         /// <param name="list">List of persons</param>
         static void ShowPeopleOlderThen20WithSort(List<Person> list)
         {
-            var sortedPeople = list.Where(x => x.Age >= 20)
+            var sortedPeople = GetPeopleOnlyOlderThen20(list)
                 .OrderBy(x => x.Name)
                 .Select(x => new { Name = x.Name, Id = x.Id});
 
